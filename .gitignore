@@ -1,0 +1,46 @@
+# compilação e pacotes gerados (vão nas Releases, não no código)
+/build/
+/dist/
+/bin/
+.montagem.*
+
+# nunca versionar BIOS, firmware, chaves, jogos ou saves
+*.iso
+*.chd
+*.cso
+*.rvz
+*.wbfs
+*.gcz
+*.nsp
+*.xci
+*.nca
+*.keys
+*.PUP
+*.pup
+*.sfc
+*.smc
+*.z64
+*.n64
+*.v64
+*.gba
+*.gbc
+*.gb
+*.bin
+*.cue
+*.pbp
+*.7z
+*.zip
+*.rar
+*.AppImage
+*.appimage
+*.flatpak
+*.srm
+*.sav
+
+# editores
+.vscode/
+.idea/
+*.swp
+*~
+.cache/
+CMakeLists.txt.user

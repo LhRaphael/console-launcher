@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Console Launcher
+GenericName=Central de jogos
+Comment=Escolha e inicie jogos emulados com o controle
+Exec=console-launcher
+Icon=console-launcher
+Terminal=false
+Categories=Game;Emulator;
+Keywords=emulador;console;jogos;ps1;ps2;ps3;xbox;nintendo;
+StartupNotify=false

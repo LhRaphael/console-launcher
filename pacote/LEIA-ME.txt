@@ -1,0 +1,71 @@
+CONSOLE LAUNCHER — PACOTE COMPLETO
+==================================
+
+Interface de console para jogos emulados, com os emuladores já incluídos.
+Para distros baseadas em Debian, x86_64, com Qt 6.4 ou mais novo:
+Debian 12/13, Ubuntu 24.04+, Linux Mint 22+, Pop!_OS 24.04, Zorin 18 e afins.
+
+
+INSTALAR
+--------
+1. Descompacte o arquivo numa pasta da sua máquina (não direto num pendrive
+   FAT/NTFS, que perde as permissões):
+
+      tar -xzf console-launcher-completo-*.tar.gz
+      cd console-launcher-*
+
+2. Rode, como o seu usuário normal (sem sudo):
+
+      bash instalar.sh
+
+   A senha de administrador é pedida uma vez, para o apt. Precisa de internet
+   para baixar as dependências do sistema e o runtime do Dolphin.
+
+Opções: bash instalar.sh --help
+   --autostart       abre o launcher sozinho ao entrar na sessão (modo console)
+   --sem-emuladores  só o programa
+   --sem-dolphin     pula o Dolphin (GameCube/Wii)
+   --compilar        compila do código (se o pacote pronto não servir na distro)
+
+
+ABRIR
+-----
+      bash executar.sh            tela cheia
+      bash executar.sh --janela   numa janela
+
+Ou pelo menu de aplicativos: "Console Launcher".
+
+
+O QUE O INSTALADOR FAZ
+----------------------
+- Confere a integridade dos arquivos (SHA256SUMS).
+- Instala as dependências: FUSE 2 (AppImages), Vulkan, GameMode, GStreamer,
+  7zip/unar, Flatpak.
+- Instala o programa (pacotes/*.deb). Se a distro não aceitar o pacote pronto,
+  compila a partir de codigo/.
+- Copia os emuladores para ~/emulators e dá permissão de execução.
+- Instala o Dolphin (Flatpak) para o seu usuário e libera o acesso a controles.
+- Guarda um registro em ~/.local/state/console-launcher/instalacao-*.log
+
+
+DEPOIS DE INSTALAR
+------------------
+- Jogos: ~/ROMs/<console> (snes, n64, gba, ps1, ps2, ps3, ps4, xbox, gc, wii,
+  switch), ou pela aba do console ▸ Importar (F4).
+- BIOS, firmware e chaves NÃO vêm no pacote: extraia do seu próprio console e
+  importe pelo menu lateral (F1) ▸ BIOS e firmware.
+- Teclas: F1 menu lateral, F2 opções do jogo, F3 opções do console,
+  F4 importar, Enter jogar. Funciona também com controle e com mouse.
+
+
+REMOVER
+-------
+      bash desinstalar.sh          só o programa
+      bash desinstalar.sh --tudo   programa, emuladores copiados e configurações
+Jogos, BIOS e saves nunca são apagados.
+
+
+EMULADORES INCLUÍDOS
+--------------------
+Veja emuladores/LICENCAS.txt: cada emulador é de seus autores e segue a
+própria licença. Este pacote é para uso pessoal; não o publique.
